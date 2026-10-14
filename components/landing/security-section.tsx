@@ -100,7 +100,7 @@ export function SecuritySection() {
               {securityFeatures.map((feature, index) => (
                 <img
                   key={feature.image}
-                  src={feature.image}
+                  src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}${feature.image}`}
                   alt={feature.title}
                   className="absolute h-3/4 w-3/4 object-contain object-right transition-opacity duration-500"
                   style={{ opacity: activeFeature === index ? 0.85 : 0 }}
